@@ -12,7 +12,7 @@ namespace BooksAndVideos.App.Services
             var customer = dbContext.Customers.FirstOrDefault(c => c.Id == order.CustomerId);
             
             //OR1
-            if (order.OrderLines.Any(orderLine => orderLine.BookMembership == true)){
+            if (order.OrderLines.ToLi.Any(orderLine => orderLine.BookMembership == true)){
                  customer.HasBookClubMembership = true;
             }
 

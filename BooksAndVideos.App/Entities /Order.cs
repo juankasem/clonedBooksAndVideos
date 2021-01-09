@@ -2,10 +2,9 @@
 {
     public class Order : Entity
     {
-        [ForeignKey]
          public int CustomerId {get; set;}
 
-         public virtual Customer Customer {get; set;}
+         public Customer Customer {get; set;}
 
          public double TotalPrice {get; set;}
 
